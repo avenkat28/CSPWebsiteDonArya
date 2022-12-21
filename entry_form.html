@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">-->
+        <link rel="stylesheet" href="./css/navstyle.css">
+        <link rel="stylesheet" href="./css/formstyle.css">
+    </head>
+    <header>
+        <div class="container">
+          <h1 class="logo">FIFA Player Stats</h1>
+    
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="entry_form.html">Add Player Stats</a></li>
+              <li><a href="lookup_form.html">Retrieve Player Stats</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <body>
+        
+        <h2 style="text-align:center">Add Soccer Player Stats</h2>
+        <div class="formcontainer">
+            <form action="http://localhost/add_player_stats.php" method="post">
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="pname">Player name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="pname" name="pname" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="lname">League name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="tname">Team name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="tname" name="tname" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="position">Position:</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="position" name="position">
+                            <option>Goalie</option>
+                            <option>Left Back</option>
+                            <option>Center Back</option>
+                            <option>Center Defensive Mid</option>
+                            <option>Center Mid</option>
+                            <option>Right Wing</option>
+                            <option>Left Wing</option>
+                            <option>Striker</option>
+                            <option>Manager</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="stats">Stats:</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="stats" name="stats" style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <input id="btn-submit" type="submit" value="Submit">
+                  </div>
+            </form>
+            <!--
+            <script>
+                var player_name = document.getElementById("pname");
+                document.getElementById("btn-submit").addEventListener("click", function(){
+                    var value=player_name.value.trim();
+                    if(!value) {
+                        alert("Player name cannot be empty!");
+                        document.getElementById("pname").style.border="1px solid red";
+                        event.preventDefault();
+                    }
+                        
+                });
+            </script>
+            -->
+        </div>
+       
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">-->
+        <link rel="stylesheet" href="./css/navstyle.css">
+        <link rel="stylesheet" href="./css/formstyle.css">
+    </head>
+
+    <!--<script id="replace_with_navbar" src="navbar.js"></script>-->
+    <header>
+        <div class="container">
+          <h1 class="logo">FIFA Player Stats</h1>
+    
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="entry_form.html">Add Player Stats</a></li>
+              <li><a href="lookup_form.html">Retrieve Player Stats</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <body>
+        <h2 style="text-align:center">Lookup Player Stats</h2>
+        <div class="formcontainer">
+            <form action="http://localhost/retrieve_player_stats.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pname">Player name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="pname" name="pname" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <input id="btn-submit" type="submit" value="Lookup Player">
+                  </div>
+            </form>
+        </div>
+    </body>
+</html>
