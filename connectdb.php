@@ -2,7 +2,7 @@
 $host = "localhost";
 $dbname = "csp";
 $username = "csp";
-$password = "Buzzer#101";
+$password = "csp3";
 
 $conn = mysqli_connect(hostname: $host, username: $username, password: $password, database: $dbname);
 
